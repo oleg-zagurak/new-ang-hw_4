@@ -1,0 +1,16 @@
+<table>
+    <tr class="thead" #thead (click)="changeSort($event, thead)">
+        <th><span data-direction="1" data-name="name">First name</span></th>
+        <th><span data-direction="1" data-name="surname">Last name</span></th>
+        <th><span data-direction="1" data-name="number">Number</span></th>
+        <th>Edit</th>
+        <th>Delete</th>
+    </tr>
+    <tr *ngFor="let phone of phones | searchPipe:searchData | sortPipe:type:direction">
+        <td>{{ phone.name }}</td>
+        <td>{{ phone.surname }}</td>
+        <td>{{ phone.number }}</td>
+        <td><button class="btn edit-btn" (click)="edit(phone)">Edit</button></td>
+        <td><button class="btn delete-btn" (click)="delete(phone)">Delete</button></td>
+    </tr>
+</table>

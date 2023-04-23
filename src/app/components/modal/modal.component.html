@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <div class="modal-container">
+        <div class="header">
+            <p class="title">{{subtitle}} phone</p>
+            <button class="btn" (click)="closeModal()">&#10006;</button>
+        </div>
+        <div class="form">
+            <form>
+                <input type="text" class="field" [(ngModel)]="mock.name" [value]="mock.name" name="name"
+                    placeholder="first name goes here">
+                <input type="text" class="field" [(ngModel)]="mock.surname" [value]="mock.surname" name="surname"
+                    placeholder="second name goes here">
+                <input type="text" class="field" [(ngModel)]="mock.number" [value]="mock.number" name="phone"
+                    placeholder="phone number goes here">
+            </form>
+        </div>
+        <div class="footer"><button class="save-btn" (click)="add()">Save</button></div>
+    </div>
+</div>
